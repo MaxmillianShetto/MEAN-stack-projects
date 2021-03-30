@@ -34,54 +34,31 @@
         </header>
     </section>
     <section id="new-blog-post-section" class="container">
-        <form action="home.html" method="get">
+        <form>
             <div class="form-group">
               <label for="article-title">Title</label>
-              <input type="text" class="form-control" id="article-title" placeholder="Enter your article's title" name="title">
+              <input type="text" class="form-control" id="article-title" placeholder="Enter your article's title" name="title" required>
             </div>            
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Your article</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="article"></textarea>
+              <label for="article-content">Your article</label>
+              <textarea class="form-control" id="article-content" rows="3" name="article" required></textarea>
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Upload</span>
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="inputGroupFile01" name="image">
-                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                  <input type="file" class="custom-file-input" id="article-image" name="image">
+                  <label class="custom-file-label" for="article-image">Choose file</label>
                 </div>
             </div>
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-primary" onclick="addArticleData()">
           </form>
     </section>
     <section id="existing-blog-posts-section">
-        <div class="card-deck container-fluid pt-4 mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/jumbotron-background.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="img/jumbotron-background.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="img/jumbotron-background.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
+        <div class="card-deck container-fluid pt-4 mb-4" id="articles-posted">
+            
+        </div>
     </section>
     <section id="footer-section">
         <footer>
